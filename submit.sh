@@ -1,8 +1,8 @@
 #!/bin/bash
 
 mvn clean package -f applications/pom.xml
-sed "s/<artifactId>task1/<artifactId>task2/g"
-sed "s/eu.euranova.novhack.MainTask1/eu.euranova.novhack.MainTask2/g"
+sed "s/<artifactId>task1/<artifactId>task2/g" applications/pom.xml
+sed "s/eu.euranova.novhack.MainTask1/eu.euranova.novhack.MainTask2/g" applications/pom.xml
 
 LOCAL_PATH="applications/target/${JAR_NAME}"
 TEAM="team1"
@@ -16,8 +16,8 @@ APP_NAME="Flink_${TEAM}"
 aws s3 cp $LOCAL_PATH $REMOTE_PATH
 
 mvn clean package -f applications/pom.xml
-sed "s/<artifactId>task2/<artifactId>task1/g"
-sed "s/eu.euranova.novhack.MainTask2/eu.euranova.novhack.MainTask1/g"
+sed "s/<artifactId>task2/<artifactId>task1/g" applications/pom.xml
+sed "s/eu.euranova.novhack.MainTask2/eu.euranova.novhack.MainTask1/g" applications/pom.xml
 
 JAR_NAME="task2-1.0.jar"
 OBJECT_NAME="${JAR_NAME}"
