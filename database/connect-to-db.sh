@@ -2,7 +2,7 @@
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-PROPERTY_FILE=${SCRIPT_DIR}/../applications/src/main/resources/application_properties.properties
+PROPERTY_FILE=${SCRIPT_DIR}/../applications/src/main/resources/application.properties
 
 function getProperty {
    PROP_KEY=$1
