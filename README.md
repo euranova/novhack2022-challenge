@@ -31,8 +31,7 @@ This script will:
 * Create the jar dependencies for Flink
 * Download the historical data
 
-4. Configure your IDE to run the code. The detailed instructions are listed
-here https://docs.google.com/document/d/1XDWkBU49dmF5JBVskEHGcslIvPFNTpkvZEgD2Rk2c48/edit?usp=sharing
+4. Run applications/src/main/java/eu/euranova/novhack/MainTask1 after hitting hammer icon to build the dependencies.
 
 
 ## Submit code
