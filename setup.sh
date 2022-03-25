@@ -49,7 +49,7 @@ fi
 
 # Pull config file from s3
 FILE_NAME="s3://novhack2022-application-configurations/application_properties_${TEAM_NAME}.properties"
-aws s3 cp "${FILE_NAME}" ${SCRIPT_DIR}/applications/src/main/resources/application.properties
+aws s3 cp "${FILE_NAME}" ${SCRIPT_DIR}/applications/src/main/resources/application_properties.properties
 if [ $? -eq 0 ]; then
   echo "Success: Config file downloaded!"
 else

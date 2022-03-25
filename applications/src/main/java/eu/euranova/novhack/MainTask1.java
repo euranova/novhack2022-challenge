@@ -29,7 +29,7 @@ public class MainTask1 {
 
     public static Map<String, Properties> getLocalApplicationProperties() throws IOException {
 
-        InputStream propsIs = MainTask1.class.getClassLoader().getResourceAsStream("application.properties");
+        InputStream propsIs = MainTask1.class.getClassLoader().getResourceAsStream("application_properties.properties");
         Properties props = new Properties();
         props.load(propsIs);
         String groupId = String.valueOf(new Date().getTime());
