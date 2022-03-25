@@ -7,6 +7,7 @@ echo 'This script will set up your AWS credentials and check your connection'
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+
 # Download AWS CLI
 echo 'Current AWS CLI version: '
 aws --version
@@ -67,20 +68,23 @@ fi
 
 # Get the sql script from S3
 FILE_NAME="s3://novhack2022-sql-scripts/init_db.sql"
-aws s3 cp "${FILE_NAME}" ${SCRIPT_DIR}/novhack-dev-env/database/init_db.sql
+aws s3 cp "${FILE_NAME}" ${SCRIPT_DIR}/database/init_db.sql
 if [ $? -eq 0 ]; then
-  echo "Success: Historical data downloaded!"
+  echo "Success: init_db.sql script downloaded!"
 else
-  echo "Failure: failed to download the init sql script"
+  echo "Failure: failed to download the init_db.sql script"
   exit 1
 fi
 
+# Connexion with the database
 # Connexion with the database
 echo 'Current psql version: '
 psql --version
 if [ $? -ne 0 ]; then
   sudo apt-get install postgresql
 fi
+
+
 
 ./database/init-db.sh
 if [ $? -eq 0 ]; then
