@@ -94,4 +94,23 @@ else
   exit 1
 fi
 
+wget https://archive.apache.org/dist/flink/flink-1.13.2/flink-1.13.2-src.tgz
+if [ $? -eq 0 ]; then
+  echo "Success"
+else
+  echo "Failure"
+  exit 1
+fi
+
+tar -xf flink-1.13.2-src.tgz
+if [ $? -eq 0 ]; then
+  echo "Success"
+else
+  echo "Failure"
+  exit 1
+fi
+
+
 echo -e 'You are ready to use the code!\nGood luck! '
+
+
