@@ -1,0 +1,90 @@
+{
+    "type": "record",
+    "namespace": "eu.euranova.novhack",
+    "name": "fcds",
+    "fields": [
+        {
+            "name": "timestamp",
+            "type": {
+                "type": "long",
+                "logicalType": "timestamp-millis"
+            }
+        },
+        {
+            "name": "trip_id",
+            "type": "string"
+        },
+        {
+            "name": "location_longitude",
+            "type": "double"
+        },
+        {
+            "name": "location_latitude",
+            "type": "double"
+        },
+        {
+            "name": "location_heading",
+            "type": "double"
+        },
+        {
+            "name": "location_distance",
+            "type": "double"
+        },
+        {
+            "name": "fuel",
+            "type": "double"
+        },
+        {
+            "name": "rpm",
+            "type": "double"
+        },
+        {
+            "name": "wheel_speed",
+            "type": "double"
+        },
+        {
+            "name": "speedLimit",
+            "type": "long"
+        },
+        {
+            "name": "slope",
+            "type": "double"
+        },
+        {
+            "name": "curvature",
+            "type": ["null", "double"]
+        },
+        {
+            "name": "functionalRoadClass",
+            "type": "long"
+        },
+        {
+            "name": "formOfWay",
+            "type": "long"
+        },
+        {
+            "name": "builtupArea",
+            "type": "long"
+        },
+        {
+            "name": "linkid",
+            "type": "string"
+        },
+        {
+            "name": "dir",
+            "type": "int"
+        },
+        {
+            "name": "offset",
+            "type": "double"
+        },
+        {
+            "name": "mmLat",
+            "type": "double"
+        },
+        {
+            "name": "mmLon",
+            "type": "double"
+        }
+    ]
+}

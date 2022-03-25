@@ -1,0 +1,7 @@
+**/*.pyc
+__pycache__
+devenv
+data
+kafka_*
+.vscode
+.idea/

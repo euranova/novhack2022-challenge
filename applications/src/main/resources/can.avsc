@@ -1,0 +1,102 @@
+{
+    "type": "record",
+    "namespace": "eu.euranova.novhack",
+    "name": "can",
+    "fields": [
+        {
+            "name": "timestamp",
+            "type": {
+                "type": "long",
+                "logicalType": "timestamp-millis"
+            }
+        },
+        {
+            "name": "trip_id",
+            "type": "string"
+        },
+        {
+            "name": "steering_angle",
+            "type": "long"
+        },
+        {
+            "name": "abs",
+            "type": "long"
+        },
+        {
+            "name": "esp",
+            "type": "long"
+        },
+        {
+            "name": "trc",
+            "type": "long"
+        },
+        {
+            "name": "yaw",
+            "type": "double"
+        },
+        {
+            "name": "gx",
+            "type": "double"
+        },
+        {
+            "name": "gy",
+            "type": "double"
+        },
+        {
+            "name": "dashboard_speed",
+            "type": "long"
+        },
+        {
+            "name": "ecozone",
+            "type": "long"
+        },
+        {
+            "name": "ambient_temp",
+            "type": "long"
+        },
+        {
+            "name": "brake",
+            "type": "long"
+        },
+        {
+            "name": "wiper",
+            "type": "long"
+        },
+        {
+            "name": "washer",
+            "type": "long"
+        },
+        {
+            "name": "accelerator",
+            "type": "double"
+        },
+        {
+            "name": "power",
+            "type": "long"
+        },
+        {
+            "name": "ev_status",
+            "type": "long"
+        },
+        {
+            "name": "soc_bar",
+            "type": "long"
+        },
+        {
+            "name": "regen",
+            "type": ["null", "double"]
+        },
+        {
+            "name": "fuel_ml",
+            "type": ["null", "double"]
+        },
+        {
+            "name": "current",
+            "type": "long"
+        },
+        {
+            "name": "voltage",
+            "type": "long"
+        }
+    ]
+}
