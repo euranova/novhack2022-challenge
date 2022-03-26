@@ -6,6 +6,8 @@
 # Example for 
 # bash get_logs.sh 3 logs
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 PROPERTY_FILE=${SCRIPT_DIR}/src/main/resources/application_properties.properties
 
 function getProperty {
