@@ -1,17 +1,18 @@
 #!/bin/bash
 
+TEAM="team1"
+
 mvn clean package -f applications/pom.xml
 sed "s/<artifactId>task1/<artifactId>task2/g" applications/pom.xml
 sed "s/eu.euranova.novhack.MainTask1/eu.euranova.novhack.MainTask2/g" applications/pom.xml
 
-LOCAL_PATH="applications/target/${JAR_NAME}"
-TEAM="team1"
 BUCKET_NAME="novhack2022-submission-${TEAM}"
 
 JAR_NAME="task1-1.0.jar"
 OBJECT_NAME="${JAR_NAME}"
 REMOTE_PATH="s3://$BUCKET_NAME/$OBJECT_NAME"
 APP_NAME="Flink_${TEAM}"
+LOCAL_PATH="applications/target/${JAR_NAME}"
 
 aws s3 cp $LOCAL_PATH $REMOTE_PATH
 
