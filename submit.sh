@@ -1,6 +1,12 @@
 #!/bin/bash
 
-TEAM="team1"
+if [ -z $1 ]
+then
+        echo "ERROR: You must run 'submit.sh $team_name' where team_name is the name of your team"
+        exit 1
+fi
+
+TEAM=$1
 
 mvn clean package -f applications/pom.xml
 sed "s/<artifactId>task1/<artifactId>task2/g" applications/pom.xml
