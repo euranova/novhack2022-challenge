@@ -16,10 +16,10 @@ function getProperty {
 
 TEAM_NAME=$(cat $PROPERTY_FILE | grep "jdbc.database" | cut -d'=' -f2)
 
-LOG_GROUP_NAME="novhack2022-kda-${TEAM_NAME}"
-LOG_STREAM_NAME_1="novhack2022-task1-kda-log-stream-${TEAM_NAME}"
-LOG_STREAM_NAME_2="novhack2022-task2-kda-log-stream-${TEAM_NAME}"
+LOG_GROUP_NAME="novhack2022-kda-${TEAM_NAME//[[:space:]]/}"
+LOG_STREAM_NAME_1="novhack2022-task1-kda-log-stream-${TEAM_NAME//[[:space:]]/}"
+LOG_STREAM_NAME_2="novhack2022-task2-kda-log-stream-${TEAM_NAME//[[:space:]]/}"
 FOLDER=$1
 
-aws logs get-log-events --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME_1 > $FILE"/task1.json"
-aws logs get-log-events --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME_2 > $FILE"/task2.json"
+aws logs get-log-events --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME_1 > $FOLDER"/task1.json"
+aws logs get-log-events --log-group-name $LOG_GROUP_NAME --log-stream-name $LOG_STREAM_NAME_2 > $FOLDER"/task2.json"

@@ -7,6 +7,12 @@
 # bash get_scoring_log.sh scoring_logs
 
 
+if [ -z $1 ]
+then
+        echo "ERROR: You must run 'get_scoring_logs.sh $foler' where gfolder is the place to put your logs (the directory must exist)"
+        exit 1
+fi
+
 LOG_GROUP_NAME="scoring"
 FOLDER=$1
 
