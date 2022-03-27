@@ -29,5 +29,6 @@ sed "s/eu.euranova.novhack.MainTask2/eu.euranova.novhack.MainTask1/g" applicatio
 JAR_NAME="task2-1.0.jar"
 OBJECT_NAME="${JAR_NAME}"
 REMOTE_PATH="s3://$BUCKET_NAME/$OBJECT_NAME"
+LOCAL_PATH="applications/target/${JAR_NAME}"
 
 aws s3 cp $LOCAL_PATH $REMOTE_PATH
