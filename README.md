@@ -49,7 +49,7 @@ This script will package your application into a .jar file and send it directly 
 //        Properties props = getKdaApplicationProperties().get("submissionProperties");
        Properties props = getLocalApplicationProperties().get("submissionProperties");
 ```
-Please modify it before submit your code. 
+Please **uncomment** the first line and **comment** on the second before submitting your code. 
 
 
 ### Common Issues
